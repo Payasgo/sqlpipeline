@@ -1,0 +1,62 @@
+{
+	"name": "DS_SqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_SqlServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "EmployeeId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "ZIP",
+				"type": "varchar"
+			},
+			{
+				"name": "Email",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "DateOfJoining",
+				"type": "varchar"
+			},
+			{
+				"name": "hiphens",
+				"type": "varchar"
+			},
+			{
+				"name": "mix",
+				"type": "varchar"
+			},
+			{
+				"name": "defaultsimpleformat",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "empinfo"
+		}
+	}
+}
