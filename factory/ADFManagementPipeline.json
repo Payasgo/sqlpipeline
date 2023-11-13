@@ -1,0 +1,9 @@
+{
+	"name": "ADFManagementPipeline",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "06a634d3-228b-4ce1-be47-d9b71428e18f",
+		"tenantId": "2db0e13c-89f2-4a67-88ce-504c6fb70607"
+	}
+}
