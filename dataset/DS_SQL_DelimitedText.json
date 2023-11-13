@@ -1,0 +1,38 @@
+{
+	"name": "DS_SQL_DelimitedText",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SchemaName": {
+				"type": "string"
+			},
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{concat(dataset().TableName,'.excel')}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{concat(dataset().SchemaName, '/', dataset().TableName)}",
+					"type": "Expression"
+				},
+				"fileSystem": "adf"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
